@@ -1,5 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AddProduct from './components/AddProduct';
 import ProductList from './components/ProductList';
+
+
 function App() {
   return (
     <div className='container'>
@@ -7,7 +10,12 @@ function App() {
         <Routes>
           <Route
             path='/'
-            element={<ProductList/>} /></Routes></BrowserRouter>
+            element={<ProductList />} />
+          <Route
+            path='/add'
+            element={<AddProduct />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
